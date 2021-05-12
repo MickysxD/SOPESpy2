@@ -1,0 +1,293 @@
+
+{
+  "header": {
+    "reportVersion": 1,
+    "event": "Allocation failed - JavaScript heap out of memory",
+    "trigger": "FatalError",
+    "filename": "report.20210512.015353.18324.0.001.json",
+    "dumpEventTime": "2021-05-12T01:53:53Z",
+    "dumpEventTimeStamp": "1620806033720",
+    "processId": 18324,
+    "cwd": "D:\\USAC\\9 semestre\\Sopes 1\\LAB\\Proyecto 2\\API\\server\\src",
+    "commandLine": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "index.js",
+      "index.js"
+    ],
+    "nodejsVersion": "v12.16.1",
+    "wordSize": 64,
+    "arch": "x64",
+    "platform": "win32",
+    "componentVersions": {
+      "node": "12.16.1",
+      "v8": "7.8.279.23-node.31",
+      "uv": "1.34.0",
+      "zlib": "1.2.11",
+      "brotli": "1.0.7",
+      "ares": "1.15.0",
+      "modules": "72",
+      "nghttp2": "1.40.0",
+      "napi": "5",
+      "llhttp": "2.0.4",
+      "http_parser": "2.9.3",
+      "openssl": "1.1.1d",
+      "cldr": "35.1",
+      "icu": "64.2",
+      "tz": "2019c",
+      "unicode": "12.1"
+    },
+    "release": {
+      "name": "node",
+      "lts": "Erbium",
+      "headersUrl": "https://nodejs.org/download/release/v12.16.1/node-v12.16.1-headers.tar.gz",
+      "sourceUrl": "https://nodejs.org/download/release/v12.16.1/node-v12.16.1.tar.gz",
+      "libUrl": "https://nodejs.org/download/release/v12.16.1/win-x64/node.lib"
+    },
+    "osName": "Windows_NT",
+    "osRelease": "10.0.19041",
+    "osVersion": "Windows 10 Home",
+    "osMachine": "x86_64",
+    "cpus": [
+      {
+        "model": "Intel(R) Core(TM) i7-7700HQ CPU @ 2.80GHz",
+        "speed": 2808,
+        "user": 101673828,
+        "nice": 0,
+        "sys": 108676500,
+        "idle": 498274765,
+        "irq": 23436421
+      },
+      {
+        "model": "Intel(R) Core(TM) i7-7700HQ CPU @ 2.80GHz",
+        "speed": 2808,
+        "user": 68540812,
+        "nice": 0,
+        "sys": 54995609,
+        "idle": 585088484,
+        "irq": 11308046
+      },
+      {
+        "model": "Intel(R) Core(TM) i7-7700HQ CPU @ 2.80GHz",
+        "speed": 2808,
+        "user": 132334515,
+        "nice": 0,
+        "sys": 68277937,
+        "idle": 508012453,
+        "irq": 2295968
+      },
+      {
+        "model": "Intel(R) Core(TM) i7-7700HQ CPU @ 2.80GHz",
+        "speed": 2808,
+        "user": 81804171,
+        "nice": 0,
+        "sys": 40740765,
+        "idle": 586079953,
+        "irq": 1308625
+      },
+      {
+        "model": "Intel(R) Core(TM) i7-7700HQ CPU @ 2.80GHz",
+        "speed": 2808,
+        "user": 112205187,
+        "nice": 0,
+        "sys": 61969875,
+        "idle": 534449828,
+        "irq": 1943531
+      },
+      {
+        "model": "Intel(R) Core(TM) i7-7700HQ CPU @ 2.80GHz",
+        "speed": 2808,
+        "user": 74613812,
+        "nice": 0,
+        "sys": 39336671,
+        "idle": 594674406,
+        "irq": 1395171
+      },
+      {
+        "model": "Intel(R) Core(TM) i7-7700HQ CPU @ 2.80GHz",
+        "speed": 2808,
+        "user": 98905843,
+        "nice": 0,
+        "sys": 50175062,
+        "idle": 559543984,
+        "irq": 1759093
+      },
+      {
+        "model": "Intel(R) Core(TM) i7-7700HQ CPU @ 2.80GHz",
+        "speed": 2808,
+        "user": 107712859,
+        "nice": 0,
+        "sys": 56070593,
+        "idle": 544841437,
+        "irq": 1320390
+      }
+    ],
+    "networkInterfaces": [
+      {
+        "name": "vEthernet (WSL)",
+        "internal": false,
+        "mac": "00:15:5d:8d:00:57",
+        "address": "fe80::2c53:9d5b:3555:d67e",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 91
+      },
+      {
+        "name": "vEthernet (WSL)",
+        "internal": false,
+        "mac": "00:15:5d:8d:00:57",
+        "address": "172.22.144.1",
+        "netmask": "255.255.240.0",
+        "family": "IPv4"
+      },
+      {
+        "name": "VMware Network Adapter VMnet1",
+        "internal": false,
+        "mac": "00:50:56:c0:00:01",
+        "address": "fe80::9486:5a1e:cd0a:f181",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 2
+      },
+      {
+        "name": "VMware Network Adapter VMnet1",
+        "internal": false,
+        "mac": "00:50:56:c0:00:01",
+        "address": "169.254.241.129",
+        "netmask": "255.255.0.0",
+        "family": "IPv4"
+      },
+      {
+        "name": "VMware Network Adapter VMnet8",
+        "internal": false,
+        "mac": "00:50:56:c0:00:08",
+        "address": "fe80::6d74:c94:7fb5:960e",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 26
+      },
+      {
+        "name": "VMware Network Adapter VMnet8",
+        "internal": false,
+        "mac": "00:50:56:c0:00:08",
+        "address": "169.254.150.14",
+        "netmask": "255.255.0.0",
+        "family": "IPv4"
+      },
+      {
+        "name": "VMware Network Adapter VMnet2",
+        "internal": false,
+        "mac": "00:50:56:c0:00:02",
+        "address": "fe80::216d:6f00:a8b8:b743",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 30
+      },
+      {
+        "name": "VMware Network Adapter VMnet2",
+        "internal": false,
+        "mac": "00:50:56:c0:00:02",
+        "address": "169.254.183.67",
+        "netmask": "255.255.0.0",
+        "family": "IPv4"
+      },
+      {
+        "name": "VMware Network Adapter VMnet3",
+        "internal": false,
+        "mac": "00:50:56:c0:00:03",
+        "address": "fe80::a853:7864:3c9c:5536",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 14
+      },
+      {
+        "name": "VMware Network Adapter VMnet3",
+        "internal": false,
+        "mac": "00:50:56:c0:00:03",
+        "address": "169.254.85.54",
+        "netmask": "255.255.0.0",
+        "family": "IPv4"
+      },
+      {
+        "name": "VMware Network Adapter VMnet4",
+        "internal": false,
+        "mac": "00:50:56:c0:00:04",
+        "address": "fe80::986:df37:9a85:a3a",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 32
+      },
+      {
+        "name": "VMware Network Adapter VMnet4",
+        "internal": false,
+        "mac": "00:50:56:c0:00:04",
+        "address": "169.254.10.58",
+        "netmask": "255.255.0.0",
+        "family": "IPv4"
+      },
+      {
+        "name": "VMware Network Adapter VMnet5",
+        "internal": false,
+        "mac": "00:50:56:c0:00:05",
+        "address": "fe80::4817:19b0:15f2:ea47",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 15
+      },
+      {
+        "name": "VMware Network Adapter VMnet5",
+        "internal": false,
+        "mac": "00:50:56:c0:00:05",
+        "address": "169.254.234.71",
+        "netmask": "255.255.0.0",
+        "family": "IPv4"
+      },
+      {
+        "name": "VMware Network Adapter VMnet6",
+        "internal": false,
+        "mac": "00:50:56:c0:00:06",
+        "address": "fe80::1df9:ca9b:a142:6b1b",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 33
+      },
+      {
+        "name": "VMware Network Adapter VMnet6",
+        "internal": false,
+        "mac": "00:50:56:c0:00:06",
+        "address": "169.254.107.27",
+        "netmask": "255.255.0.0",
+        "family": "IPv4"
+      },
+      {
+        "name": "Wi-Fi",
+        "internal": false,
+        "mac": "64:6e:69:65:78:f3",
+        "address": "2800:98:1111:14c6::2",
+        "netmask": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+        "family": "IPv6",
+        "scopeid": 0
+      },
+      {
+        "name": "Wi-Fi",
+        "internal": false,
+        "mac": "64:6e:69:65:78:f3",
+        "address": "2800:98:1111:14c6:b454:a3b7:5161:b302",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 0
+      },
+      {
+        "name": "Wi-Fi",
+        "internal": false,
+        "mac": "64:6e:69:65:78:f3",
+        "address": "2800:98:1111:14c6:6873:c310:44bb:19b6",
+        "netmask": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+        "family": "IPv6",
+        "scopeid": 0
+      },
+      {
+        "name": "Wi-Fi",
+        "internal": false,
+        "mac": "64:6e:69:65:78:f3",
+        "address": "fe80::b454:a3b7:5161:b302",
+        "netmask": "ffff:ffff:ffff:fff
