@@ -1,0 +1,60 @@
+*********
+git clone repo
+
+********* ---------------------------------- construir la imagen
+docker build -t gcr.io/[nombreP]/[id] .
+
+*********----------------------------------- ver las imagenes creadas
+docker image ls
+
+
+*********
+gcloud auth configure-docker
+
+********* ---------------------------------- agregar al container registry
+docker push gcr.io/[nombreP]/[id]
+
+********* ---------------------------------- modificar un archivo *nano*
+nano deployment.yml 
+
+********* ---------------------------------- ver namespaces
+kubectl get namespaces
+
+********* ----------------------------------- crear namespace para el ingres
+kubectl create namespace ingress-nginx
+
+********* ----------------------------------- crear namespace para deployment
+kubectl create namespace sopesp2
+
+********* ----------------------------------- Cambiar de namespace en el que se esta trabajando
+kubectl config set-context --current --namespace=ingress-nginx
+
+********* ----------------------------------- agregar el ingress-nginx con helm
+helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx 
+
+********* ----------------------------------- Actualizar repo helm
+helm repo update
+
+********* ----------------------------------- Instalar el ingress-nginx
+helm install ingress-nginx ingress-nginx/ingress-nginx
+
+********* ----------------------------------- ver pods
+kubectl get pods
+
+********* ----------------------------------- ver servicios
+kubectl get services
+
+********* ----------------------------------- ir al namespace donde se va deployar el proyecto
+kubectl config set-context --current --namespace=sopesp2
+
+********* ---------------------------------- realizar deployment
+kubectl apply -f deployment.yml
+
+********* ---------------------------------- aplicar los servicios
+kubectl apply -f clusterip.yml
+
+********* ---------------------------------- aplicar el ingress
+kubectl apply -f ingress.yml
+
+********* ---------------------------------- describe ingress
+

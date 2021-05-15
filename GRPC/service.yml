@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: grpc-service
+spec:
+  selector:
+    app: grpc-py2
+  ports:
+    - port: 8000
+      targetPort: 8000
+  #type: LoadBalancer
+  type: NodePort

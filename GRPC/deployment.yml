@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: grpc-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: grpc-py2
+  template:
+    metadata:
+      labels:
+        app: grpc-py2
+    spec:
+      containers:
+      - name: clientgrpc
+        #image: gcr.io/pure-advantage-305004/clientgrpc
+        image: mickyxd/clientgrpc
+        ports:
+        - containerPort: 8000
+      - name: servergrpc
+        #image: gcr.io/pure-advantage-305004/servergrpc
+        image: mickyxd/servergrpc
+        ports:
+        - containerPort: 3000
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: grpc-service
+spec:
+  selector:
+    app: grpc-py2
+  ports:
+    - port: 8000
+      targetPort: 8000
+      #nodePort: 31000
+  #type: LoadBalancer
+  type: NodePort

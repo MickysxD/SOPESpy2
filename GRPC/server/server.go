@@ -92,8 +92,8 @@ func (*server) Greet(ctx context.Context, req *greetpb.GreetRequest) (*greetpb.G
 }
 
 func main() {
-	host := "localhost:3000"
-	//host := "0.0.0.0:3000"
+	//host := "localhost:3000"
+	host := ":3000"
 
 	fmt.Println("SERVER: server iniciado en ", host)
 

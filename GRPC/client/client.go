@@ -15,7 +15,8 @@ import (
 
 func enviarMensaje(name string, location string, gender string, age int64, vaccine_type string) {
 	//server := "grpcserver:3000"
-	server := "localhost:3000"
+	//server := "localhost:3000"
+	server := "0.0.0.0:3000"
 
 	println("CLIENTE: Enviando peticion a ", server)
 
@@ -69,7 +70,7 @@ func main() {
 	})
 
 	println("CLIENTE: servidor de cliente escuchando en 8000")
-	http.ListenAndServe("localhost:8000", nil)
+	http.ListenAndServe(":8000", nil)
 }
 
 //Creo que no es necesario con el anterior de greet.proto
