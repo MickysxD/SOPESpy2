@@ -10,7 +10,7 @@ import (
 )
 
 var (
-	kafkaBrokers    = []string{"35.192.47.92:9093"}
+	kafkaBrokers    = []string{":9093"}
 	kafkaTopics     = []string{"sarama_topic"}
 	consumerGroupID = "sarama_consumer"
 )

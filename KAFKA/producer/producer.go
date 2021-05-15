@@ -12,7 +12,7 @@ import (
 )
 
 var (
-	kafkaBrokers = []string{"35.192.47.92:9093"}
+	kafkaBrokers = []string{":9093"}
 	KafkaTopic   = "sarama_topic"
 	enqueued     int
 )
