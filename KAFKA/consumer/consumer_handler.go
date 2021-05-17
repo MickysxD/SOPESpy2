@@ -3,10 +3,12 @@ package consumer
 import (
 	"context"
 	"encoding/json"
+	"fmt"
 	"log"
 	"time"
 
 	"github.com/Shopify/sarama"
+	"github.com/go-redis/redis/v8"
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"
 )
@@ -75,8 +77,35 @@ func Connection() *mongo.Collection {
 func creacion(data Data) {
 	var err error
 
-	ctx := context.Background()
+	client := redis.NewClient(&redis.Options{
+		Addr:     "104.197.236.53:6379",
+		Password: "",
+		DB:       0,
+	})
 
+	s := ""
+	concatenated := fmt.Sprintf("%d%s", data.Age, s)
+
+	msg := `{ "name": "` + data.Name + `",
+	"location": "` + data.Location + `",
+	"gender": "` + data.Gender + `",
+	"age": ` + concatenated + `,
+	"vaccine_type": "` + data.Vaccine_type + `",
+	"path": "Kafka"  
+	 }`
+
+	defer client.Close()
+
+	var ctx = context.Background()
+	val, err := client.Do(ctx, "RPUSH", "REGISTROP2", msg).Result()
+	if err != nil {
+		fmt.Println("Error: ", err)
+		fmt.Println("Error: ", val)
+	}
+
+	ctx = context.Background()
+
+	fmt.Println(data)
 	_, err = collection.InsertOne(ctx, data)
 	if err != nil {
 		log.Fatal(err)
